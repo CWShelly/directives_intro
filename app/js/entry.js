@@ -3,11 +3,19 @@ const myApp = angular.module('myApp', []);
 
 require('./directives')(myApp);
 
-myApp.run(['$rootScope', function($rs){
-    $rs.tasks = [
+// myApp.run(['$rootScope', function($rs){
+//     $rs.tasks = [
+//         {desc: 'buy carrots'},
+//         {desc: 'buy potatoes'},
+//         {desc: 'buy vodka'}
+//     ];
+//     this.description = 'Description from controller'
+// }]);
+myApp.controller('TasksController', function(){
+    this.tasks = [
         {desc: 'buy carrots'},
         {desc: 'buy potatoes'},
         {desc: 'buy vodka'}
     ];
     this.description = 'Description from controller'
-}]);
+});

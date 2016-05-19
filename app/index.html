@@ -5,10 +5,12 @@
   <title>Document</title>
 </head>
 <body data-ng-app="myApp">
+  <main data-ng-controller="TasksController as taskCtrl">
 <h1>qfc</h1>
-  <my-list data-list-title="Grocery List"
 
-  data-tasks="tasks"> </my-list>
+  <div data-my-list data-list-title="Grocery List"
+
+  data-tasks="taskCtrl.tasks"> </div>
 
   <div data-my-list data-list-title= "Another List" data-tasks="tasks.description"></div>
 
